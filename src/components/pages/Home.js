@@ -5,10 +5,13 @@ import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
-import HeroImage from "assets/hero.jpg";
 import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
+
+import HeroImage from "assets/hero.jpg";
+import AboutVideo from "assets/about.mp4";
+import Footer from "components/organisms/Footer";
 
 const Home = () => (
   <>
@@ -49,6 +52,38 @@ const Home = () => (
         </Feature>
       </Grid>
     </Section>
+    <Section inverse>
+      <Heading>
+        <h2>Conheça nossos serviços</h2>
+      </Heading>
+    </Section>
+    <Section>
+      <Grid md={2}>
+        <div>
+          <Heading>
+            <h2>Nakagawa Auto Escola</h2>
+          </Heading>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+            provident accusantium doloribus corrupti delectus a sit perspiciatis
+            iure! Voluptatum magnam, ab qui obcaecati ipsum ex laudantium
+            dolorum eligendi? Corrupti, quo!
+          </p>
+          <div>
+            <Button color="primary">Saiba mais</Button>
+          </div>
+        </div>
+        <div>
+          <video src={AboutVideo} width="100%" autoPlay loop />
+        </div>
+      </Grid>
+    </Section>
+    <Section inverse>
+      <Heading>
+        <h2>Dúvidas recorrentes</h2>
+      </Heading>
+    </Section>
+    <Footer />
   </>
 );
 

@@ -8,7 +8,7 @@ import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
 
 export default {
-  title: "Components/molecules/Hero",
+  title: "Components/Molecules/Hero",
   component: Hero,
 };
 

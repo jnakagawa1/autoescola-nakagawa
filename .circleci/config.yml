@@ -19,8 +19,22 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
+  versioning:
+    docker:
+      - image: circleci/node:14.15.4
+    steps:
+      - checkout
+      - run:
+          name: Check package version
+          command: node scripts/check-version jnakagawa1 autoescola-nakagawa
 
 workflows:
   ci:
     jobs:
       - tests
+      - versioning:
+          filters:
+            branches:
+              ignore: master
+            tags:
+              ignore: /.*/

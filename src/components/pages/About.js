@@ -4,6 +4,10 @@ import styled from "styled-components";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
+import Section from "components/molecules/Section";
+import Grid from "components/atoms/Grid";
+import Footer from "components/organisms/Footer";
+import Card, { CardMedia, CardMediaDescription } from "components/atoms/Card";
 
 import HeroImage from "assets/hero.jpg";
 import AboutImage from "draws/About";
@@ -13,11 +17,6 @@ import InstImage3 from "assets/instructors/inst3.jpg";
 import InstImage4 from "assets/instructors/inst4.jpg";
 import InstImage5 from "assets/instructors/inst5.jpg";
 import InstImage6 from "assets/instructors/inst6.jpg";
-
-import Section from "components/molecules/Section";
-import Grid from "components/atoms/Grid";
-import Footer from "components/organisms/Footer";
-import Card, { CardMedia, CardMediaDescription } from "components/atoms/Card";
 
 const ImageContainer = styled.div`
   svg {

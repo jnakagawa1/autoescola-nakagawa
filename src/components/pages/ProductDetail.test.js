@@ -2,8 +2,11 @@ import React from "react";
 import { render, screen } from "test.utils";
 
 import ProductDetail from "./ProductDetail";
+import { buildProduct } from "models/builders/products";
 
 test("renders Product Detail page", () => {
-  render(<ProductDetail />);
-  expect(screen.getByText("Nome do Serviço")).toBeInTheDocument();
+  render(<ProductDetail product={buildProduct()} />);
+  expect(
+    screen.getByText("Unbranded Granite Pizza", { selector: "h1" })
+  ).toBeInTheDocument();
 });
